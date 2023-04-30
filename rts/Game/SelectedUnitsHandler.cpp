@@ -645,7 +645,7 @@ void CSelectedUnitsHandler::Draw()
 			bool myColor = true;
 			glColor4fv(cmdColors.buildBox);
 
-			for (const auto bi: unitHandler.GetBuilderCAIs()) {
+			for (const auto &bi: unitHandler.GetBuilderCAIs()) {
 				const CBuilderCAI* builderCAI = bi.second;
 				const CUnit* builder = builderCAI->owner;
 
@@ -921,7 +921,7 @@ std::string CSelectedUnitsHandler::GetTooltip()
 		}
 	}
 
-	const std::string custom = std::move(eventHandler.WorldTooltip(nullptr, nullptr, nullptr));
+	const std::string custom = eventHandler.WorldTooltip(nullptr, nullptr, nullptr);
 	if (!custom.empty())
 		return custom;
 

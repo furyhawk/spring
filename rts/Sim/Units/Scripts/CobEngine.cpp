@@ -31,7 +31,7 @@ CR_REG_METADATA(CCobEngine::SleepingThread, (
 	CR_MEMBER(wt)
 ))
 
-static const char* const numCobThreadsPlot = "CobThreads";
+// static const char* const numCobThreadsPlot = "CobThreads";
 
 int CCobEngine::AddThread(CCobThread&& thread)
 {
